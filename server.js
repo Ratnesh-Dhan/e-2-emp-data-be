@@ -11,6 +11,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/users", require("./routes/userRoutes"));
+app.use("/api/emp", require("./routes/empRoutes"));
+app.use("/api/department", require("./routes/departmentRoutes"));
 
 app.get("/", (req, res) => {
   res.send("Hello World");

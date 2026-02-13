@@ -1,7 +1,7 @@
 const Department = require("../models/Department");
 
 // CREATE
-exports.createEmployee = async (req, res) => {
+exports.createDepartment = async (req, res) => {
   try {
     const department = await Department.create(req.body);
     res.status(201).json(department);
@@ -11,7 +11,7 @@ exports.createEmployee = async (req, res) => {
 };
 
 // GET ALL
-exports.getEmployee = async (req, res) => {
+exports.getDepartment = async (req, res) => {
   const department = await Department.find();
   res.json(department);
 };
